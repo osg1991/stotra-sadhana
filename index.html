@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stotra Sadhana</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <p class="eyebrow">Local-first memorization</p>
+      <h1>Stotra Sadhana</h1>
+    </div>
+    <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <section class="panel focus-panel">
+      <div>
+        <p class="eyebrow">Focus texts</p>
+        <h2>Select one or more</h2>
+        <p class="muted">A single selection creates a focused queue. Multiple selections create a mixed Sahasranāma review.</p>
+      </div>
+      <div id="text-selector" class="selector-grid"></div>
+    </section>
+
+    <nav class="tabs" aria-label="Main sections">
+      <button class="tab active" data-view="library">Library</button>
+      <button class="tab" data-view="read">Read</button>
+      <button class="tab" data-view="learn">Learn</button>
+      <button class="tab" data-view="review">Review <span id="due-count" class="badge">0</span></button>
+      <button class="tab" data-view="progress">Progress</button>
+    </nav>
+
+    <section id="view-library" class="view active"></section>
+    <section id="view-read" class="view"></section>
+    <section id="view-learn" class="view"></section>
+    <section id="view-review" class="view"></section>
+    <section id="view-progress" class="view"></section>
+  </main>
+
+  <template id="empty-template">
+    <div class="empty-state">
+      <h2>No text selected</h2>
+      <p>Select at least one Sahasranāma above.</p>
+    </div>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
